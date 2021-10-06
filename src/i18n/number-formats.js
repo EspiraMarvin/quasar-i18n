@@ -17,6 +17,12 @@ export default {
       currency: 'EUR'
     }
   },
+  es: {
+    currency: {
+      style: 'currency',
+      currency: 'EUR'
+    }
+  },
   'en-us': {
     currency: {
       style: 'currency',

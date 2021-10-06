@@ -4,9 +4,11 @@
 
       <q-separator class="q-my-lg" />
 
-      <q-btn label="English" @click="$i18n.locale = 'en-US'" />
+<!--
+     <q-btn label="English" @click="$i18n.locale = 'en-US'" />
       <q-btn label="German"  @click="$i18n.locale = 'de'" />
       <q-btn label="French"  @click="$i18n.locale = 'fr'" />
+      <q-btn label="Spanish"  @click="$i18n.locale = 'es'" />
       <q-btn label="Swahili" @click="$i18n.locale = 'sw'" />
       <q-btn label="Swahili Kenya" @click="$i18n.locale = 'swKE'" />
 
@@ -14,14 +16,15 @@
       <q-btn :label="$t('success')"/>
       <p>{{ $t('failed') }}</p>
       <p>{{ $t('success') }}</p>
+-->
 
       <div class="q-pa-md">
-        <q-select label="Select Language" v-model="lang" map-options :options="langs" class="row"/>
+        <q-select label="Select Language" v-model="lang" map-options :options="langs" class="row" outlined/>
         <div class="row q-pt-md">Phrase for Success: {{ $t('success') }}</div>
         <div class="row q-pt-md">Phrase for Failure: {{ $t('failed') }}</div>
         <div class="row q-pt-md">Current Language: {{ $i18n.locale }}</div>
-        <div class="row q-pt-md">Currency: {{ $n(100, 'currency') }}</div>
-        Currency with functional Component: <i18n-n :value="100" format="currency"></i18n-n>
+<!--        <div class="row q-pt-md">Currency: {{ $n(100, 'currency') }}</div>-->
+<!--        Currency with functional Component: <i18n-n :value="100" format="currency"></i18n-n>-->
         <div>
           <q-table :data="data" :columns="columns" row-key="name" :pagination.sync="pagination">
             <template v-slot:body="props">
@@ -58,6 +61,10 @@ export default {
         {
           label: 'French',
           value: 'fr'
+        },
+        {
+          label: 'Spanish',
+          value: 'es'
         },
         {
           label: 'Swahili',

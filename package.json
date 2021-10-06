@@ -12,7 +12,6 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
-    "i18n-locales": "^0.0.5",
     "quasar": "^1.0.0",
     "vue-i18n": "^8.0.0"
   },
